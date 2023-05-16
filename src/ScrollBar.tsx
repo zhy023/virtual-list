@@ -62,12 +62,12 @@ export default class ScrollBar extends React.Component<ScrollBarProps, ScrollBar
   }
 
   delayHidden = () => {
-    clearTimeout(this.visibleTimeout);
-
-    this.setState({ visible: true });
-    this.visibleTimeout = setTimeout(() => {
-      this.setState({ visible: false });
-    }, 2000);
+    // @todo:zhangmao 修改
+    // clearTimeout(this.visibleTimeout);
+    // this.setState({ visible: true });
+    // this.visibleTimeout = setTimeout(() => {
+    //   this.setState({ visible: false });
+    // }, 2000);
   };
 
   onScrollbarTouchStart = (e: TouchEvent) => {
@@ -231,7 +231,7 @@ export default class ScrollBar extends React.Component<ScrollBarProps, ScrollBar
             top,
             left: 0,
             position: 'absolute',
-            background: 'rgba(0, 0, 0, 0.5)',
+            background: 'rgba(0, 0, 0, 0.2)',
             borderRadius: 99,
             cursor: 'pointer',
             userSelect: 'none',
